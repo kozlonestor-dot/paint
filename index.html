@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Drawing</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .color-buttons {
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas" width="800" height="600" onmousedown="startDrawing(event)" onmousemove="draw(event)"
+        onmouseup="stopDrawing()">
+    </canvas>
+
+    <div class="color-buttons">
+        <div>
+            <button class="red" onclick="changeColor('red')"></button>
+            <button class="blue" onclick="changeColor('blue')"></button>
+            <button class="green" onclick="changeColor('green')"></button>
+            <button class="black" onclick="changeColor('black')"></button>
+            <button class="yellow" onclick="changeColor('yellow')"></button>
+        </div>
+        <button class="white" onclick="changeColor('white')"></button>
+    </div>
+</body>
+
+</html>
